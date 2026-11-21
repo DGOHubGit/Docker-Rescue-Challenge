@@ -1,0 +1,4 @@
+NAME                                 IMAGE                              COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+docker-rescue-challenge-backend-1    docker-rescue-challenge-backend    "uvicorn main:app --…"   backend    21 minutes ago   Up 21 minutes             8000/tcp
+docker-rescue-challenge-db-1         postgres:16-alpine                 "docker-entrypoint.s…"   db         21 minutes ago   Up 21 minutes (healthy)   5432/tcp
+docker-rescue-challenge-frontend-1   docker-rescue-challenge-frontend   "/docker-entrypoint.…"   frontend   21 minutes ago   Up 21 minutes             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp

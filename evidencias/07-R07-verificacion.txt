@@ -1,0 +1,114 @@
+=== Intento 1 ===
+ Container docker-rescue-challenge-frontend-1 Stopping 
+ Container docker-rescue-challenge-frontend-1 Stopped 
+ Container docker-rescue-challenge-frontend-1 Removing 
+ Container docker-rescue-challenge-frontend-1 Removed 
+ Container docker-rescue-challenge-backend-1 Stopping 
+ Container docker-rescue-challenge-backend-1 Stopped 
+ Container docker-rescue-challenge-backend-1 Removing 
+ Container docker-rescue-challenge-backend-1 Removed 
+ Container docker-rescue-challenge-db-1 Stopping 
+ Container docker-rescue-challenge-db-1 Stopped 
+ Container docker-rescue-challenge-db-1 Removing 
+ Container docker-rescue-challenge-db-1 Removed 
+ Network docker-rescue-challenge_default Removing 
+ Network docker-rescue-challenge_default Removed 
+ Network docker-rescue-challenge_default Creating 
+ Network docker-rescue-challenge_default Creating 
+ Network docker-rescue-challenge_default Created 
+ Network docker-rescue-challenge_default Created 
+ Container docker-rescue-challenge-db-1 Creating 
+ Container docker-rescue-challenge-db-1 Created 
+ Container docker-rescue-challenge-backend-1 Creating 
+ Container docker-rescue-challenge-backend-1 Created 
+ Container docker-rescue-challenge-frontend-1 Creating 
+ Container docker-rescue-challenge-frontend-1 Created 
+ Container docker-rescue-challenge-db-1 Starting 
+ Container docker-rescue-challenge-db-1 Started 
+ Container docker-rescue-challenge-db-1 Waiting 
+ Container docker-rescue-challenge-db-1 Healthy 
+ Container docker-rescue-challenge-backend-1 Starting 
+ Container docker-rescue-challenge-backend-1 Started 
+ Container docker-rescue-challenge-frontend-1 Starting 
+ Container docker-rescue-challenge-frontend-1 Started 
+NAME                                 IMAGE                              COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+docker-rescue-challenge-backend-1    docker-rescue-challenge-backend    "uvicorn main:app --…"   backend    21 seconds ago   Up 15 seconds             8000/tcp
+docker-rescue-challenge-db-1         postgres:16-alpine                 "docker-entrypoint.s…"   db         21 seconds ago   Up 20 seconds (healthy)   5432/tcp
+docker-rescue-challenge-frontend-1   docker-rescue-challenge-frontend   "/docker-entrypoint.…"   frontend   20 seconds ago   Up 15 seconds             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+HTTP 200
+=== Intento 2 ===
+ Container docker-rescue-challenge-frontend-1 Stopping 
+ Container docker-rescue-challenge-frontend-1 Stopped 
+ Container docker-rescue-challenge-frontend-1 Removing 
+ Container docker-rescue-challenge-frontend-1 Removed 
+ Container docker-rescue-challenge-backend-1 Stopping 
+ Container docker-rescue-challenge-backend-1 Stopped 
+ Container docker-rescue-challenge-backend-1 Removing 
+ Container docker-rescue-challenge-backend-1 Removed 
+ Container docker-rescue-challenge-db-1 Stopping 
+ Container docker-rescue-challenge-db-1 Stopped 
+ Container docker-rescue-challenge-db-1 Removing 
+ Container docker-rescue-challenge-db-1 Removed 
+ Network docker-rescue-challenge_default Removing 
+ Network docker-rescue-challenge_default Removed 
+ Network docker-rescue-challenge_default Creating 
+ Network docker-rescue-challenge_default Creating 
+ Network docker-rescue-challenge_default Created 
+ Network docker-rescue-challenge_default Created 
+ Container docker-rescue-challenge-db-1 Creating 
+ Container docker-rescue-challenge-db-1 Created 
+ Container docker-rescue-challenge-backend-1 Creating 
+ Container docker-rescue-challenge-backend-1 Created 
+ Container docker-rescue-challenge-frontend-1 Creating 
+ Container docker-rescue-challenge-frontend-1 Created 
+ Container docker-rescue-challenge-db-1 Starting 
+ Container docker-rescue-challenge-db-1 Started 
+ Container docker-rescue-challenge-db-1 Waiting 
+ Container docker-rescue-challenge-db-1 Healthy 
+ Container docker-rescue-challenge-backend-1 Starting 
+ Container docker-rescue-challenge-backend-1 Started 
+ Container docker-rescue-challenge-frontend-1 Starting 
+ Container docker-rescue-challenge-frontend-1 Started 
+NAME                                 IMAGE                              COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+docker-rescue-challenge-backend-1    docker-rescue-challenge-backend    "uvicorn main:app --…"   backend    21 seconds ago   Up 15 seconds             8000/tcp
+docker-rescue-challenge-db-1         postgres:16-alpine                 "docker-entrypoint.s…"   db         21 seconds ago   Up 20 seconds (healthy)   5432/tcp
+docker-rescue-challenge-frontend-1   docker-rescue-challenge-frontend   "/docker-entrypoint.…"   frontend   21 seconds ago   Up 15 seconds             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+HTTP 200
+=== Intento 3 ===
+ Container docker-rescue-challenge-frontend-1 Stopping 
+ Container docker-rescue-challenge-frontend-1 Stopped 
+ Container docker-rescue-challenge-frontend-1 Removing 
+ Container docker-rescue-challenge-frontend-1 Removed 
+ Container docker-rescue-challenge-backend-1 Stopping 
+ Container docker-rescue-challenge-backend-1 Stopped 
+ Container docker-rescue-challenge-backend-1 Removing 
+ Container docker-rescue-challenge-backend-1 Removed 
+ Container docker-rescue-challenge-db-1 Stopping 
+ Container docker-rescue-challenge-db-1 Stopped 
+ Container docker-rescue-challenge-db-1 Removing 
+ Container docker-rescue-challenge-db-1 Removed 
+ Network docker-rescue-challenge_default Removing 
+ Network docker-rescue-challenge_default Removed 
+ Network docker-rescue-challenge_default Creating 
+ Network docker-rescue-challenge_default Creating 
+ Network docker-rescue-challenge_default Created 
+ Network docker-rescue-challenge_default Created 
+ Container docker-rescue-challenge-db-1 Creating 
+ Container docker-rescue-challenge-db-1 Created 
+ Container docker-rescue-challenge-backend-1 Creating 
+ Container docker-rescue-challenge-backend-1 Created 
+ Container docker-rescue-challenge-frontend-1 Creating 
+ Container docker-rescue-challenge-frontend-1 Created 
+ Container docker-rescue-challenge-db-1 Starting 
+ Container docker-rescue-challenge-db-1 Started 
+ Container docker-rescue-challenge-db-1 Waiting 
+ Container docker-rescue-challenge-db-1 Healthy 
+ Container docker-rescue-challenge-backend-1 Starting 
+ Container docker-rescue-challenge-backend-1 Started 
+ Container docker-rescue-challenge-frontend-1 Starting 
+ Container docker-rescue-challenge-frontend-1 Started 
+NAME                                 IMAGE                              COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+docker-rescue-challenge-backend-1    docker-rescue-challenge-backend    "uvicorn main:app --…"   backend    21 seconds ago   Up 15 seconds             8000/tcp
+docker-rescue-challenge-db-1         postgres:16-alpine                 "docker-entrypoint.s…"   db         21 seconds ago   Up 20 seconds (healthy)   5432/tcp
+docker-rescue-challenge-frontend-1   docker-rescue-challenge-frontend   "/docker-entrypoint.…"   frontend   21 seconds ago   Up 15 seconds             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+HTTP 200
