@@ -1,0 +1,10 @@
+backend-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+backend-1  | INFO:     172.18.0.4:45328 - "GET /items HTTP/1.0" 200 OK
+backend-1  | INFO:     Started server process [1]
+backend-1  | INFO:     Waiting for application startup.
+backend-1  | INFO:     Application startup complete.
+backend-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+backend-1  | INFO:     172.18.0.4:48988 - "GET /items HTTP/1.0" 200 OK
+backend-1  | INFO:     172.18.0.4:60456 - "GET /items HTTP/1.0" 200 OK
+backend-1  | INFO:     172.18.0.4:35858 - "GET /items HTTP/1.0" 200 OK
+backend-1  | INFO:     172.18.0.4:44934 - "GET /health HTTP/1.0" 503 Service Unavailable
