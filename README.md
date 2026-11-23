@@ -1,16 +1,58 @@
-# RepoCloud
+# ACI606 - Docker Rescue Challenge
 
-ACI606 - Docker Rescue Challenge
-Este repositorio contiene una aplicación web multi-servicio que debe ejecutarse mediante Docker Compose.
-Arquitectura general
-Frontend (Nginx) -> Backend/API (FastAPI) -> Database (PostgreSQL)
-Situación inicial
-El sistema fue recibido desde un equipo anterior y presenta múltiples problemas de construcción, configuración, comunicación y operación. No se informa la cantidad total de fallas ni su ubicación.
-Su trabajo consiste en diagnosticar el sistema utilizando evidencia técnica, reparar las incidencias identificadas y demostrar que la solución final puede ejecutarse de forma reproducible.
-Inicio sugerido
+Aplicación multi-servicio: Frontend (Nginx) → Backend (FastAPI) → Base de datos (PostgreSQL).
+
+## Requisitos
+- Docker y Docker Compose
+
+## 1. Configuración
+```bash
+cp .env.example .env
+```
+Edita `.env` si quieres cambiar usuario, clave, base de datos o puerto.
+
+## 2. Construir e iniciar
 ```bash
 docker compose up --build -d
 docker compose ps
-docker compose logs
 ```
-No reemplace la aplicación por un proyecto nuevo. Trabaje sobre los archivos suministrados y documente cada modificación en el informe técnico y mediante el historial del repositorio.
+Los tres servicios deben aparecer `Up`, y `db` como `healthy`.
+
+## 3. Verificar
+```bash
+curl -s http://localhost:8080/api/health
+curl -s -X POST http://localhost:8080/api/items -H "Content-Type: application/json" -d '{"name":"prueba"}'
+curl -s http://localhost:8080/api/items
+```
+También se puede abrir `http://localhost:8080` en el navegador (en Codespaces, desde la pestaña Puertos).
+
+## 4. Logs y diagnóstico
+```bash
+docker compose logs backend
+docker compose logs frontend
+docker compose logs db
+docker compose config
+```
+
+## 5. Detener
+```bash
+docker compose down
+```
+Los datos se conservan en el volumen `pgdata`.
+
+## 6. Recrear
+```bash
+docker compose down
+docker compose up --build -d
+```
+Los datos persisten tras recrear los contenedores.
+
+## 7. Borrado completo (ELIMINA LOS DATOS)
+```bash
+docker compose down -v
+```
+
+## Arquitectura
+- `frontend`: Nginx en el puerto 80 interno, publicado en `${FRONTEND_PORT}`; hace proxy de `/api/` hacia `backend:8000`.
+- `backend`: FastAPI en el puerto 8000, se conecta a `db` mediante `DATABASE_URL`.
+- `db`: PostgreSQL 16 con volumen nombrado `pgdata` y healthcheck `pg_isready`.
