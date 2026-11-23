@@ -56,3 +56,11 @@ docker compose down -v
 - `frontend`: Nginx en el puerto 80 interno, publicado en `${FRONTEND_PORT}`; hace proxy de `/api/` hacia `backend:8000`.
 - `backend`: FastAPI en el puerto 8000, se conecta a `db` mediante `DATABASE_URL`.
 - `db`: PostgreSQL 16 con volumen nombrado `pgdata` y healthcheck `pg_isready`.
+
+## Diagrama de arquitectura
+
+```
+Navegador -> frontend (Nginx :80, publicado 8080) -> backend (FastAPI :8000) -> db (PostgreSQL, volumen pgdata)
+```
+
+El diagrama detallado de la arquitectura inicial y final está en el informe técnico (secciones 2 y 6).
